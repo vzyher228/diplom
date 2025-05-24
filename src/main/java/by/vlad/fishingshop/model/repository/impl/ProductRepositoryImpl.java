@@ -20,11 +20,6 @@ public class ProductRepositoryImpl implements Repository<Product> {
     private static final Logger logger = LogManager.getLogger();
     private static final String ADD_PRODUCT_QUERY = "INSERT INTO products (vendor,name, manufacture_id, type_id, description, image, price, number_in_stock)" +
             " VALUES (?,?,(SELECT id FROM product_manufacture WHERE manufacture = ?),(SELECT id FROM product_types WHERE type = ?),?,?,?,?);";
-//    private static final String ADD_PRODUCT_QUERY =
-//            "WITH manufacture_cte AS (SELECT id FROM product_manufacture WHERE manufacture = ?), " +
-//                    "type_cte AS (SELECT id FROM product_types WHERE type = ?) " +
-//                    "INSERT INTO products (vendor, name, manufacture_id, type_id, description, image, price, number_in_stock) " +
-//                    "SELECT ?, ?, manufacture_cte.id, type_cte.id, ?, ?, ?, ? FROM manufacture_cte, type_cte;";
 
 
     private static final String UPDATE_PRODUCT_QUERY = "UPDATE products SET vendor = ? , name = ? ,manufacture_id = (SELECT id FROM product_manufacture WHERE manufacture = ?)," +
