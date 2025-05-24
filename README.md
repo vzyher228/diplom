@@ -22,4 +22,3 @@ ___
   * Add new manager
   * Block/unblock users
 ___
-![fishingshop](https://user-images.githubusercontent.com/64686102/130369387-0fedd126-6e9c-41ca-baf4-6c224923705a.jpg)
